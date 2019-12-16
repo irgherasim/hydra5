@@ -8,7 +8,7 @@ import { EventBus, State } from 'vertx3-eventbus-rx-client';
 export class AppComponent implements OnInit {
   title = 'app';
   eb: any;
-  apiResult: any;
+  apiCallResult: any;
   constructor() {}
 
   ngOnInit() {
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     // send and expect a reply
     this.eb.rxSend('in.Node2', { type: 'getStaticData' }).subscribe(
       reply => {
-        this.apiResult = reply.body;
+        this.apiCallResult = reply.body;
       },
       error => {
         // received an error
