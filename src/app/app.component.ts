@@ -6,10 +6,10 @@ import { EventBus, State } from 'vertx3-eventbus-rx-client';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
   eb: any;
   apiCallResult: any;
-  constructor() {}
+  EVENT_BUS_URL = 'http://ddcf6d23-cf77-405c-a22f-772a66df8e89.cloudapp.net:10063/eb';
+  constructor() { }
 
   ngOnInit() {
     this.initEventBus();
@@ -17,9 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   initEventBus() {
-    this.eb = EventBus.create(
-      'http://ddcf6d23-cf77-405c-a22f-772a66df8e89.cloudapp.net:10063/eb'
-    );
+    this.eb = EventBus.create(this.EVENT_BUS_URL);
   }
 
   eventBusStateSubscription() {
@@ -39,7 +37,7 @@ export class AppComponent implements OnInit {
   sendStaticDataRequest() {
     // send and expect a reply
     this.eb.rxSend('in.Node2', { type: 'getStaticData' }).subscribe(
-      reply => {
+      (reply: { body: any; }) => {
         this.apiCallResult = reply.body;
       },
       error => {
@@ -49,3 +47,4 @@ export class AppComponent implements OnInit {
     );
   }
 }
+
