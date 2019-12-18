@@ -14,6 +14,7 @@ import { RatesComponent } from "./rates/rates.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatMenu } from "@angular/material";
 import { MenuOverviewComponent } from './menu-overview/menu-overview.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuOverviewComponent } from './menu-overview/menu-overview.component';
     HomeComponent,
     HeaderComponent,
     RatesComponent,
-    MenuOverviewComponent
+    MenuOverviewComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

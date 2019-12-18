@@ -15,7 +15,7 @@
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  background-image: url("assets/mountain-in-snow.jpg");
+  background-image: url("assets/mountain-in-snow.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
