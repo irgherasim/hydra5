@@ -1,5 +1,5 @@
-import { Component, Input, ViewChild, AfterViewInit } from '@angular/core';
-import { MatSort, MatTableDataSource } from '@angular/material';
+import { Component, Input, ViewChild, AfterViewInit } from "@angular/core";
+import { MatSort, MatTableDataSource } from "@angular/material";
 
 export interface Rate {
   bank: {
@@ -25,28 +25,27 @@ export interface Rate {
   bespoke: boolean;
 }
 @Component({
-  selector: 'app-rates',
-  templateUrl: './rates.component.html',
-  styleUrls: ['./rates.component.css']
+  selector: "app-rates",
+  templateUrl: "./rates.component.html",
+  styleUrls: ["./rates.component.css"]
 })
 export class RatesComponent implements AfterViewInit {
   displayedColumns = [
-    'bank.name',
-    'currency.symbol',
-    'band.low',
-    'band.high',
-    'tenor.tenor',
-    'rate',
-    'bespoke'
+    "bank.name",
+    "currency.symbol",
+    "band.low",
+    "band.high",
+    "tenor.tenor",
+    "rate",
+    "bespoke"
   ];
   @ViewChild(MatSort) sort: MatSort;
   @Input() dataSource: MatTableDataSource<Rate[]>;
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
+    if (this.dataSource) {
+      this.dataSource.sort = this.sort;
+    }
   }
 }
-
-
-
