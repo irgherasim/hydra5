@@ -10,12 +10,6 @@ export class CustomIconService {
   ) {}
 
   init() {
-    this.matIconRegistry.addSvgIcon(
-      'copy_link',
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/icons/copy-link.svg'
-      )
-    );
 
   }
 }
