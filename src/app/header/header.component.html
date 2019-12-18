@@ -1,0 +1,15 @@
+<header class="header-container">
+  <div class="left-side">
+    <img class="header-logo" src="assets/ubs-logo.png" />
+    <span class="header-text">Hydra PoC</span>
+  </div>
+  <div class="right-side" *ngIf="isUserLoggedIn">
+    <div class="picture-profile">
+      <img class="user-photo" src="assets/user.jpg" />
+    </div>
+    <div class="notifications"></div>
+    <div class="actions">
+        <button class="login-button" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</header>

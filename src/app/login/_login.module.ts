@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
 @NgModule({
   imports: [
     FormsModule,    //added here too
-    ReactiveFormsModule //added here too
+    ReactiveFormsModule, //added here too
   ],
   providers: [AuthService, LoginService],
   declarations: [LoginComponent]

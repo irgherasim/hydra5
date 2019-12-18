@@ -1,13 +1,21 @@
-<form [formGroup]="form">
-  <fieldset>
-      <legend>Login</legend>
-      <div class="form-field">
-          <label>Email:</label>
-          <input name="email" formControlName="email">
-      </div>
-  </fieldset>
-  <div class="form-buttons">
-      <button class="button button-primary" 
-              (click)="login()">Login</button>
+<div class="page">
+  <div class="header">
+    <app-header></app-header>
   </div>
-</form>
+  <div class="body">
+    <div class="left-side">
+      <p class="big-text">
+        Welcome to UBS Hydra
+      </p>
+      <p class="small-text">A new DLT based Deposit Platform</p>
+    </div>
+    <div class="login-box">
+      <p class="title">Log in</p>
+      <p class="text">Enter your registered email address</p>
+      <form [formGroup]="form">
+        <input class="login-input" name="email" formControlName="email" />
+        <button class="login-button" (click)="login()">LOGIN</button>
+      </form>
+    </div>
+  </div>
+</div>

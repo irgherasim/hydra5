@@ -1,0 +1,28 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  height: 30px;
+  padding: 20px 25px 20px 15px;
+}
+.user-photo {
+  height: 30px;
+  padding: 20px 25px 20px 15px;
+}
+.header-text {
+  color: gray;
+  font-family: sans-serif;
+}
+.right-side {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

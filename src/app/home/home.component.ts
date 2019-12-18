@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EventBus, State } from 'vertx3-eventbus-rx-client';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
