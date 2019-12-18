@@ -7,9 +7,14 @@
     <div class="picture-profile">
       <img class="user-photo" src="assets/user-circle.png" />
     </div>
-    <div class="notifications"></div>
-    <div class="actions">
-        <button class="login-button" (click)="logout()"><mat-icon svgIcon="home"></mat-icon>Logout</button>
+    <div class="notifications">
+      <mat-icon class="notif-icon">notifications</mat-icon> 5
     </div>
+    <div class="actions">
+      <button class="login-button" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>Logout
+      </button>
+    </div>
+    <app-menu-overview></app-menu-overview>
   </div>
 </header>

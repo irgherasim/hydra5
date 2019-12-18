@@ -1,0 +1,41 @@
+<div class="example-container mat-elevation-z8" *ngIf="dataSource">
+  <mat-table #table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="bank.name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Bank</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.bank.name }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="currency.symbol">
+      <mat-header-cell *matHeaderCellDef> CCY </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.currency.symbol }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="tenor.tenor">
+      <mat-header-cell *matHeaderCellDef> Tenor </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.tenor.tenor }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="band.low">
+      <mat-header-cell *matHeaderCellDef> Low Band </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.band.low }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="band.high">
+      <mat-header-cell *matHeaderCellDef> High Band </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.band.high }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="rate">
+      <mat-header-cell *matHeaderCellDef> Rate </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.rate }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="bespoke">
+        <mat-header-cell *matHeaderCellDef> Bespoke </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.bespoke }} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

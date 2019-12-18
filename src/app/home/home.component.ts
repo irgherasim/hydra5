@@ -51,7 +51,8 @@ export class HomeComponent implements OnInit {
   getRates() {
     this.eb.rxSend('in.Node1', {type: 'getRates', currency: 'IBM1'}).subscribe(
       reply => {
-        this.rates = JSON.stringify(JSON.parse(reply.body), undefined, 4);
+        console.log(JSON.parse(reply.body));
+        this.rates = JSON.parse(reply.body);
       },
       error => {
         console.log(error);
